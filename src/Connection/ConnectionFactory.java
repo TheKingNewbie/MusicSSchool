@@ -19,13 +19,13 @@ import java.util.logging.Logger;
  */
 public class ConnectionFactory {
 
-    private static final String DRIVER = "org.sqlite.JDBC";
-    private static final String URL = "jdbc:sqlite:C:\\Users\\GSantiago\\Documents\\Gabriel\\SQLiteStudio\\db\\MusicSSchool.db";
-
+    private static final String DRIVER = "org.hsqldb.jdbc.JDBCDriver";
+    private static final String URL = "jdbc:hsqldb:file:ifpa/musicSSchool";  
+    private static final String user = "root";
     public static Connection getConnection() {
         try {
             Class.forName(DRIVER);
-            return DriverManager.getConnection(URL);
+            return DriverManager.getConnection(URL, user, "");
         } catch (ClassNotFoundException | SQLException ex) {
             throw new RuntimeException("Erro na conexão: ", ex);
         }

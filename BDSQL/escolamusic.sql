@@ -1,4 +1,4 @@
-create database escolamusica;
+﻿create database escolamusica;
 use escolamusica;
 
 -- --------------------------
@@ -12,6 +12,8 @@ show tables;
 drop database escolamusica;
 update tbAlunos set mesPagamento = "Junho" where cod_aluno = 1;
 -- --------------------------
+
+
 
 create table tbAlunos(
 cod_Aluno bigint auto_increment,
@@ -46,6 +48,7 @@ telefone bigint,
 email varchar(50),
 instrumento varchar (40),
 primary key (cod_Professor));
+
 
 create table tblogin(
 idlogin bigint auto_increment,

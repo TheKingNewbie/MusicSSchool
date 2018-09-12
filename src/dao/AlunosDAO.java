@@ -23,7 +23,7 @@ public class AlunosDAO {
     public void create(AlunosBeans alunosBeans) {
         conexao = Conexao.conectar();
         try {
-            String sql = "INSERT INTO TBALUNOS(NOMEALUNO, CPF, DATANASCIMENTO, ENDERECO, CEP, EMAIL, dataPagamento, TELEFONE, DATACADASTRO, HORARIO, DIASSEMANAIS, instrumentos) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO TBALUNOS (NOMEALUNO, CPF, DATANASCIMENTO, ENDERECO,CEP, EMAIL,DATAPAGAMENTO, TELEFONE, DATACADASTRO,HORARIO,DIASSEMANAIS, INSTRUMENTOS) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement stm = conexao.prepareStatement(sql);
             stm.setString(1, alunosBeans.getNomeAluno());
             stm.setString(2, alunosBeans.getCpf());

@@ -4,17 +4,18 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 
 public class Conexao {
-    private static final String DRIVER = "org.sqlite.JDBC";
-    private static final String URL = "jdbc:sqlite:C:\\Users\\GSantiago\\Documents\\Gabriel\\SQLiteStudio\\db\\musicsschool.db";  
+    private static final String DRIVER = "org.hsqldb.jdbcDriver";
+    private static final String URL = "jdbc:hsqldb:file:musicSSchool"; 
+    private static final String usuario = "root";
     private static Connection conexao;
  public Conexao(){ 
         try {
 
           
-    Class.forName("org.sqlite.JDBC");
-    String url = "jdbc:sqlite:C:\\Users\\GSantiago\\Documents\\Gabriel\\SQLiteStudio\\db\\musicsschool.db";  
-            
-          conexao = DriverManager.getConnection(url);
+    Class.forName(DRIVER);
+    String url = "jdbc:hsqldb:file:musicSSchool";  
+    String usuario = "root";
+          conexao = DriverManager.getConnection(url, usuario, "");
           System.out.println("Conexão ok");
         }
         catch(Exception erro){

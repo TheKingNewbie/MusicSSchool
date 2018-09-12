@@ -8,9 +8,8 @@ import java.sql.*;
 import javax.swing.*;
 
 public class ConexaoPesquisa {
-
-    final private String driver = "org.sqlite.JBDC";
-    final private String caminho = "jdbc:sqlite:C:\\Users\\GSantiago\\Documents\\Gabriel\\SQLiteStudio\\db\\musicsschool.db"; 
+    final private String driver = "org.hsqldb.jdbc.JDBCDriver";
+    final private String user = "root";
     private Connection conexao;
     public Statement statement;
     public ResultSet resultset;
@@ -18,10 +17,10 @@ public class ConexaoPesquisa {
      public ConexaoPesquisa(){ 
          
         try {
-    Class.forName("org.sqlite.JDBC");
-    String url = "jdbc:sqlite:C:\\Users\\GSantiago\\Documents\\Gabriel\\SQLiteStudio\\db\\musicsschool.db";  
+    Class.forName(driver);
+    String url = "jdbc:hsqldb:file:ifpa/musicSSchool"; 
             
-          conexao = DriverManager.getConnection(url);
+          conexao = DriverManager.getConnection(url, user, "");
           System.out.println("Conexão ok");
         }
         catch(Exception erro){
