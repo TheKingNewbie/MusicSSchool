@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7cd16c4-22b4-47fa-b4b2-b29cd866d94d">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     tborcamento_A.`idorc` AS tborcamento_A_idorc,
+     tborcamento_A.`valortotal` AS tborcamento_A_valortotal,
+     tborcamento_A.`tipoFesta` AS tborcamento_A_tipoFesta,
+     tborcamento_A.`obs` AS tborcamento_A_obs,
+     tborcamento_A.`inst1` AS tborcamento_A_inst1,
+     tborcamento_A.`inst2` AS tborcamento_A_inst2,
+     tborcamento_A.`inst3` AS tborcamento_A_inst3,
+     tborcamento_A.`inst4` AS tborcamento_A_inst4,
+     tborcamento_A.`inst5` AS tborcamento_A_inst5,
+     tborcamento_A.`inst6` AS tborcamento_A_inst6,
+     tborcamento_A.`inst7` AS tborcamento_A_inst7,
+     tborcamento_A.`inst8` AS tborcamento_A_inst8,
+     tborcamento_A.`inst9` AS tborcamento_A_inst9,
+     tborcamento_A.`inst10` AS tborcamento_A_inst10,
+     tborcamento_A.`qtd1` AS tborcamento_A_qtd1,
+     tborcamento_A.`qtd2` AS tborcamento_A_qtd2,
+     tborcamento_A.`qtd3` AS tborcamento_A_qtd3,
+     tborcamento_A.`qtd4` AS tborcamento_A_qtd4,
+     tborcamento_A.`qtd5` AS tborcamento_A_qtd5,
+     tborcamento_A.`qtd6` AS tborcamento_A_qtd6,
+     tborcamento_A.`qtd7` AS tborcamento_A_qtd7,
+     tborcamento_A.`qtd8` AS tborcamento_A_qtd8,
+     tborcamento_A.`qtd9` AS tborcamento_A_qtd9,
+     tborcamento_A.`qtd10` AS tborcamento_A_qtd10,
+     tborcamento_A.`obs1` AS tborcamento_A_obs1,
+     tborcamento_A.`obs2` AS tborcamento_A_obs2,
+     tborcamento_A.`obs3` AS tborcamento_A_obs3,
+     tborcamento_A.`obs4` AS tborcamento_A_obs4,
+     tborcamento_A.`obs5` AS tborcamento_A_obs5,
+     tborcamento_A.`obs6` AS tborcamento_A_obs6,
+     tborcamento_A.`obs7` AS tborcamento_A_obs7,
+     tborcamento_A.`obs8` AS tborcamento_A_obs8,
+     tborcamento_A.`obs9` AS tborcamento_A_obs9,
+     tborcamento_A.`obs10` AS tborcamento_A_obs10
+FROM
+     `tborcamento` tborcamento_A]]>
+	</queryString>
+	<field name="tborcamento_A_idorc" class="java.lang.Long"/>
+	<field name="tborcamento_A_valortotal" class="java.lang.String"/>
+	<field name="tborcamento_A_tipoFesta" class="java.lang.String"/>
+	<field name="tborcamento_A_obs" class="java.lang.String"/>
+	<field name="tborcamento_A_inst1" class="java.lang.String"/>
+	<field name="tborcamento_A_inst2" class="java.lang.String"/>
+	<field name="tborcamento_A_inst3" class="java.lang.String"/>
+	<field name="tborcamento_A_inst4" class="java.lang.String"/>
+	<field name="tborcamento_A_inst5" class="java.lang.String"/>
+	<field name="tborcamento_A_inst6" class="java.lang.String"/>
+	<field name="tborcamento_A_inst7" class="java.lang.String"/>
+	<field name="tborcamento_A_inst8" class="java.lang.String"/>
+	<field name="tborcamento_A_inst9" class="java.lang.String"/>
+	<field name="tborcamento_A_inst10" class="java.lang.String"/>
+	<field name="tborcamento_A_qtd1" class="java.lang.Integer"/>
+	<field name="tborcamento_A_qtd2" class="java.lang.Integer"/>
+	<field name="tborcamento_A_qtd3" class="java.lang.Integer"/>
+	<field name="tborcamento_A_qtd4" class="java.lang.Integer"/>
+	<field name="tborcamento_A_qtd5" class="java.lang.Integer"/>
+	<field name="tborcamento_A_qtd6" class="java.lang.Integer"/>
+	<field name="tborcamento_A_qtd7" class="java.lang.Integer"/>
+	<field name="tborcamento_A_qtd8" class="java.lang.Integer"/>
+	<field name="tborcamento_A_qtd9" class="java.lang.Integer"/>
+	<field name="tborcamento_A_qtd10" class="java.lang.Integer"/>
+	<field name="tborcamento_A_obs1" class="java.lang.String"/>
+	<field name="tborcamento_A_obs2" class="java.lang.String"/>
+	<field name="tborcamento_A_obs3" class="java.lang.String"/>
+	<field name="tborcamento_A_obs4" class="java.lang.String"/>
+	<field name="tborcamento_A_obs5" class="java.lang.String"/>
+	<field name="tborcamento_A_obs6" class="java.lang.String"/>
+	<field name="tborcamento_A_obs7" class="java.lang.String"/>
+	<field name="tborcamento_A_obs8" class="java.lang.String"/>
+	<field name="tborcamento_A_obs9" class="java.lang.String"/>
+	<field name="tborcamento_A_obs10" class="java.lang.String"/>
+	<group name="GrupoBanda">
+		<groupExpression><![CDATA[
+]]></groupExpression>
+	</group>
+	<title>
+		<band height="143" splitType="Stretch">
+			<staticText>
+				<reportElement x="239" y="37" width="229" height="44" uuid="5baee3b9-b28c-4cd3-bca1-b570cdc3b704"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORÇAMENTO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="14" y="0" width="175" height="143" uuid="deb17ebe-ac04-4ae2-8d62-89e9c36cab1b"/>
+				<imageExpression><![CDATA["C:\\Users\\GSantiago\\Documents\\NetBeansProjects\\MusicSSchool\\relatorios\\Cordas.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="315" splitType="Stretch">
+			<staticText>
+				<reportElement x="71" y="51" width="81" height="13" uuid="6a874d38-bedb-486f-b34e-17cf6310e346"/>
+				<text><![CDATA[Tipo do Evento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="77" width="100" height="16" uuid="c804554f-4fd0-41d5-a6ea-22619b83f59d"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Orquestra:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="299" width="442" height="16" uuid="f57700a2-9b6e-46d6-888e-30132a342d54"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ Obs: Tabela de indicação, poderá ser modificada e assim alterando o VALOR TOTAL conforme a escolha do cliente ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="69" y="88" width="464" height="211" uuid="8355904b-d1a0-4549-86d6-c940e86e33fe"/>
+				<imageExpression><![CDATA["C:\\Users\\GSantiago\\Pictures\\Projeto Integrador\\ASDFAS.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="132" y="96" width="100" height="14" uuid="c8e3e454-dcdb-4c5a-9cd4-945e5c66ac39"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[INSTRUMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="96" width="39" height="20" uuid="aafb4f53-00c7-4638-8611-954ffc0422e3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[QTD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="96" width="100" height="20" uuid="cf73faeb-630e-420b-8d74-240c501f97cf"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[OBSERVAÇÃO:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnFooter>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement x="26" y="12" width="459" height="66" uuid="471f790a-8897-4705-b18c-07a639d98332"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Escolher quais instrumentos quer na sua programação, acrescentar ou remover é um direito do cliente conforme o estilo da programação.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="95" width="163" height="20" uuid="849dbfa9-9ae8-4bbe-af0d-82d997666339"/>
+				<text><![CDATA[Forma de Pagamento: ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="34" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="272" y="3" width="96" height="20" uuid="478ad0f8-048f-4954-89db-9ea6259e1535"/>
+				<textElement textAlignment="Justified">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="224" y="4" width="123" height="30" uuid="dba77214-1e3d-461a-a398-c85a07c476ec"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[  Altamira,    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="14" width="100" height="20" uuid="5fedd3e9-618b-4379-8600-1a0f8a206586"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cordas & Acordes]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

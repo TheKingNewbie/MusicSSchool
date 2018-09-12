@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="orcamento" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6b2de134-08cc-487e-ace6-1dc7633a742a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tborcamento.`idorcamento` AS tborcamento_idorcamento,
+     tborcamento.`inst1` AS tborcamento_inst1,
+     tborcamento.`inst2` AS tborcamento_inst2,
+     tborcamento.`inst3` AS tborcamento_inst3,
+     tborcamento.`inst4` AS tborcamento_inst4,
+     tborcamento.`inst5` AS tborcamento_inst5,
+     tborcamento.`inst6` AS tborcamento_inst6,
+     tborcamento.`inst7` AS tborcamento_inst7,
+     tborcamento.`inst8` AS tborcamento_inst8,
+     tborcamento.`inst9` AS tborcamento_inst9,
+     tborcamento.`inst10` AS tborcamento_inst10,
+     tborcamento.`inst11` AS tborcamento_inst11,
+     tborcamento.`inst12` AS tborcamento_inst12,
+     tborcamento.`tipoFesta` AS tborcamento_tipoFesta,
+     tborcamento.`valortotal` AS tborcamento_valortotal,
+     tborcamento.`quantInstrumento` AS tborcamento_quantInstrumento,
+     tborcamento.`obs` AS tborcamento_obs
+FROM
+     `tborcamento` tborcamento]]>
+	</queryString>
+	<field name="tborcamento_idorcamento" class="java.lang.Long"/>
+	<field name="tborcamento_inst1" class="java.lang.String"/>
+	<field name="tborcamento_inst2" class="java.lang.String"/>
+	<field name="tborcamento_inst3" class="java.lang.String"/>
+	<field name="tborcamento_inst4" class="java.lang.String"/>
+	<field name="tborcamento_inst5" class="java.lang.String"/>
+	<field name="tborcamento_inst6" class="java.lang.String"/>
+	<field name="tborcamento_inst7" class="java.lang.String"/>
+	<field name="tborcamento_inst8" class="java.lang.String"/>
+	<field name="tborcamento_inst9" class="java.lang.String"/>
+	<field name="tborcamento_inst10" class="java.lang.String"/>
+	<field name="tborcamento_inst11" class="java.lang.String"/>
+	<field name="tborcamento_inst12" class="java.lang.String"/>
+	<field name="tborcamento_tipoFesta" class="java.lang.String"/>
+	<field name="tborcamento_valortotal" class="java.lang.Double"/>
+	<field name="tborcamento_quantInstrumento" class="java.lang.Integer"/>
+	<field name="tborcamento_obs" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<image>
+				<reportElement x="456" y="0" width="99" height="132" uuid="e9b8e1ec-1c94-4b3c-bbff-6528924d04ba"/>
+				<imageExpression><![CDATA["cherry.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="451" height="95" backcolor="#000000" uuid="2985cb03-02c3-4f7f-824a-7c719d298449"/>
+				<staticText>
+					<reportElement style="Title" x="0" y="0" width="370" height="66" uuid="0440e9b0-e1bc-46dd-98f6-ef70fa6468a9"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cherry Title]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="SubTitle" x="157" y="66" width="249" height="29" uuid="26e1e4dc-510b-4453-86f2-0d5b2e77d1aa"/>
+					<textElement>
+						<font size="22" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cherry SubTitle]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="100" width="451" height="32" forecolor="#000000" backcolor="#CC0000" uuid="3d8f24e0-97a1-4bb8-a101-90976b5998d3"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="307" y="12" width="144" height="20" forecolor="#FFFFFF" uuid="c80f9c0e-1df5-400b-8ba3-e793c83ae184"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="0" y="7" width="32" height="18" forecolor="#000000" uuid="7f638f5c-d76d-4c7d-b086-31f87a951337"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_idorcamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="32" y="7" width="32" height="18" forecolor="#000000" uuid="7dbe6af3-6463-4dd6-8261-e7c032fb2749"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="64" y="7" width="32" height="18" forecolor="#000000" uuid="74323d17-3f3a-4ae1-b5a3-ee8e8ae5e3a3"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="96" y="7" width="32" height="18" forecolor="#000000" uuid="0fada49d-67c0-4ebd-998f-a075e324823c"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="128" y="7" width="32" height="18" forecolor="#000000" uuid="e420d474-1d7e-49cc-90fc-8f43991005ad"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="160" y="7" width="32" height="18" forecolor="#000000" uuid="2693331b-6f15-4d89-81ce-e22dfdc71579"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="192" y="7" width="32" height="18" forecolor="#000000" uuid="b7475a9c-f9c8-448b-904a-3901d60446ff"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="224" y="7" width="32" height="18" forecolor="#000000" uuid="6990c293-22dc-44c8-8b7b-ffdfb0eec68b"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="256" y="7" width="32" height="18" forecolor="#000000" uuid="73aef04b-3096-4862-a4b5-04cf6b1aa603"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="288" y="7" width="32" height="18" forecolor="#000000" uuid="637cf6c8-271e-4a5a-b3f6-05669f7c4485"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="320" y="7" width="32" height="18" forecolor="#000000" uuid="13f7eec2-69b9-4344-b112-6fdb709b89c0"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="352" y="7" width="32" height="18" forecolor="#000000" uuid="e11a7c10-5d87-4bb6-9a5f-83572d0b68d8"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="384" y="7" width="32" height="18" forecolor="#000000" uuid="a0a93fe6-a751-417d-b26c-f7947cef4526"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_inst12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="416" y="7" width="32" height="18" forecolor="#000000" uuid="ee9eac77-1425-4181-b78e-dcc6879213e5"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_tipoFesta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="448" y="7" width="32" height="18" forecolor="#000000" uuid="445053ed-fc1c-4c0b-b6c2-256f6dffbdbf"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_valortotal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="480" y="7" width="32" height="18" forecolor="#000000" uuid="81b97ef1-c9b4-4373-a8c7-99f02923b649"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_quantInstrumento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="512" y="7" width="32" height="18" forecolor="#000000" uuid="44db1cfb-0e9c-4765-ac98-12622b5dcc55"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[tborcamento_obs]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="18" uuid="b44060ab-c056-4d0e-b6c8-704f63a6bb96"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="0" y="0" width="32" height="18" uuid="1ac78602-67a5-4a55-b8b7-0421efc86bab"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_idorcamento}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="32" y="0" width="32" height="18" uuid="98b4fc99-ec41-4d7d-8d32-e07ef45a1f1a"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="64" y="0" width="32" height="18" uuid="83be31d7-c7b6-4c9a-b892-70303d18056a"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="96" y="0" width="32" height="18" uuid="8a520f13-136c-4ae1-b9ba-2134b373d543"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="128" y="0" width="32" height="18" uuid="87136daf-b409-4c44-b729-8eaf2d095dde"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="160" y="0" width="32" height="18" uuid="40066a42-e932-4789-b48f-f1de12d1926a"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst5}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="192" y="0" width="32" height="18" uuid="546aceb3-ae81-48bb-a700-849cf4fbfe3d"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst6}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="224" y="0" width="32" height="18" uuid="6ad7c4ba-43cc-4e46-a874-3cbb20adc794"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst7}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="256" y="0" width="32" height="18" uuid="0686e5f3-38dc-44c3-b7c1-515da4a56514"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst8}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="288" y="0" width="32" height="18" uuid="d9d87e02-a781-4fd8-b94c-6035c304bcfb"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst9}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="320" y="0" width="32" height="18" uuid="0ca42c9c-8a55-4c7f-a6cd-415e7170bc12"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst10}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="352" y="0" width="32" height="18" uuid="be8f0530-6eec-4c45-84ea-a275d94669ba"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst11}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="384" y="0" width="32" height="18" uuid="50029c32-44ab-42a6-8327-0f1de094c0eb"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_inst12}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="416" y="0" width="32" height="18" uuid="c7798518-95ad-409e-a842-3db9b294349c"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_tipoFesta}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="448" y="0" width="32" height="18" uuid="33070410-1b90-4930-91f2-bc23fb3a30ad"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_valortotal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="480" y="0" width="32" height="18" uuid="ae7dfa84-4374-4546-9843-2d3552d00f5d"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_quantInstrumento}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="512" y="0" width="32" height="18" uuid="1e34ab7d-a749-4d76-a0cc-d8a475201d08"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tborcamento_obs}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="5a5c11e4-442a-4354-9d89-5b34ac0a6f33"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#000000" uuid="4e2b27a3-1e84-406b-ba67-594d48a0714d"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="513" y="0" width="40" height="20" forecolor="#FFFFFF" uuid="dea9be3c-76d4-4200-9d37-f5a020ed0677"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="433" y="0" width="80" height="20" forecolor="#FFFFFF" uuid="b9fae945-edde-4529-8fc1-8a5457a5c332"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="1" width="197" height="20" forecolor="#FFFFFF" uuid="05e061e7-18c4-4dff-bc5c-f7b28c2e7aa6"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
